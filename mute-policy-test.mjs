@@ -1,0 +1,4 @@
+import assert from 'node:assert/strict';import{createMutePolicy}from'./mute-policy.mjs';
+let p=createMutePolicy();assert.equal(p.update(false,0).desired_muted,true);assert.equal(p.update(true,300).desired_muted,true);assert.equal(p.update(false,600).desired_muted,true);assert.equal(p.update(true,900).desired_muted,true);assert.equal(p.update(true,1200).desired_muted,false);assert.equal(p.update(false,1500).desired_muted,true);assert.equal(p.update(null,1800).desired_muted,false);
+p=createMutePolicy({initialMuted:true});assert.equal(p.update(true,0).desired_muted,true);assert.equal(p.update(true,100).desired_muted,true);assert.equal(p.update(true,300).desired_muted,false);
+console.log('Passed: immediate entry, single-frame leak rejected, reset on ad, timed confirmed return, inconclusive fail-open');
