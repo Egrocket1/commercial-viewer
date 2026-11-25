@@ -1,6 +1,6 @@
 # Commercial Viewer · Audio decision policy
 
-An AI-assisted prototype for muting commercials during sports broadcasts. This excerpt from the Mac handoff demonstrates the audio decision policy.
+An AI-assisted prototype for muting commercials during sports broadcasts. The [Windows detector components](windows/README.md) include the break policy, correction handling, evidence collection, audio fingerprints and offline tests. The smaller example below comes from the original Mac handoff.
 
 ## Engineering decision
 
